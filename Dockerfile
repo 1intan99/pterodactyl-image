@@ -1,4 +1,4 @@
-FROM        node:16.13.0-buster-slim
+FROM        node:16.17.1-buster-slim
 
 RUN         apt update \
             && apt -y install ffmpeg iproute2 git sqlite3 python3 ca-certificates tzdata dnsutils build-essential wget gnupg libcairo2-dev libjpeg-dev libcogl-pango-dev libgif-dev \
