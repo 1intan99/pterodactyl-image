@@ -9,6 +9,7 @@ RUN         apt update \
             && apt-get install -y fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 \
                 --no-install-recommends \
             && rm -rf /var/lib/apt/lists/* \
+            && adduser -D -h /home/container container
 
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
