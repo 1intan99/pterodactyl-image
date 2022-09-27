@@ -2,7 +2,7 @@ FROM        node:16.13.0-alpine
 
 WORKDIR     /app
 
-RUN         apk add --no-cache build-base g++ cairo-dev jpeg-dev pango-dev giflib-dev python3 ffmpeg ca-certificates  \
+RUN         apk add --no-cache fontconfig ffmpeg bash iproute2 git sqlite sqlite-dev python3 python3-dev ca-certificates tzdata zip tar curl g++ make cairo-dev jpeg-dev pango-dev giflib-dev python3 ffmpeg ca-certificates build-base \
             && npm install -g npm@latest \
             && adduser -D -h /home/container container
 
